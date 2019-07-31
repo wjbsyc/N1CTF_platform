@@ -31,7 +31,7 @@
                 <mu-card-text v-html="challenge.description"></mu-card-text>
                 <mu-card-actions>
                     <mu-button flat v-if="challenge.url" label="题目地址" @click="reference">
-                        题目地址
+                        Link
                     </mu-button>
                 </mu-card-actions>
                 <!-- <mu-text-field v-model="value6" label="Label Float" prefix="$" label-float ></mu-text-field> -->
@@ -40,20 +40,20 @@
             </mu-card>
             <mu-button flat v-if="challenge.power" slot="actions" :href="routeList.get('edit') +'/' + challenge.id"
                             color="secondary" >
-                            编辑
+                            Edit
             </mu-button>
            <!--  <mu-flat-button v-if="challenge.power" slot="actions" :href="routeList.get('edit') +'/' + challenge.id"
                             primary label="编辑"/> -->
             <mu-button flat v-if="challenge.power" slot="actions"  @click="openAlertDialog"  color="secondary" >
-                            删除
+                            Delete
             </mu-button>
           <!--   <mu-flat-button v-if="challenge.power" slot="actions" @click="deleteChallenge" primary label="删除"/> -->
               <mu-button flat slot="actions"   @click="close" primary color="secondary" >
-                            取消
+                            Cancel
             </mu-button>        
            <!--  <mu-flat-button slot="actions" @click="close" primary label="取消"/> -->
               <mu-button flat slot="actions"   @click="submitFlag" primary color="secondary" >
-                            提交
+                            Submit
             </mu-button> 
           <!--   <mu-flat-button slot="actions" primary @click="submitFlag" label="提交"/> -->
         </mu-dialog>
@@ -76,7 +76,7 @@
                 </mu-list>
             </mu-card>
             <mu-button flat slot="actions"   @click="solversClose" primary color="secondary" >
-                            关闭
+                            Close
             </mu-button> 
            <!--  <mu-flat-button slot="actions" @click="solversClose" primary label="关闭"/> -->
         </mu-dialog>
@@ -153,11 +153,11 @@
                         } else {
 
                             if (response.data) {
-                                this.result = '成功！';
+                                this.result = 'Success！';
                                 this.challenge.passed = true;
                                 this.challenge.solvers++;
                             } else {
-                                this.result = '失败！';
+                                this.result = 'Fail！';
                             }
                             this.submitStat = response.data
                         }

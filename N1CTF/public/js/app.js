@@ -77088,11 +77088,11 @@ exports.default = {
                 } else {
 
                     if (response.data) {
-                        _this2.result = '成功！';
+                        _this2.result = 'Success！';
                         _this2.challenge.passed = true;
                         _this2.challenge.solvers++;
                     } else {
-                        _this2.result = '失败！';
+                        _this2.result = 'Fail！';
                     }
                     _this2.submitStat = response.data;
                 }
@@ -77404,7 +77404,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                        题目地址\n                    "
+                                        "\n                        Link\n                    "
                                       )
                                     ]
                                   )
@@ -77447,7 +77447,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                            编辑\n            "
+                            "\n                            Edit\n            "
                           )
                         ]
                       )
@@ -77467,7 +77467,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                            删除\n            "
+                            "\n                            Delete\n            "
                           )
                         ]
                       )
@@ -77485,7 +77485,11 @@ var render = function() {
                       on: { click: _vm.close },
                       slot: "actions"
                     },
-                    [_vm._v("\n                            取消\n            ")]
+                    [
+                      _vm._v(
+                        "\n                            Cancel\n            "
+                      )
+                    ]
                   ),
                   _vm._v(" "),
                   _c(
@@ -77500,7 +77504,11 @@ var render = function() {
                       on: { click: _vm.submitFlag },
                       slot: "actions"
                     },
-                    [_vm._v("\n                            提交\n            ")]
+                    [
+                      _vm._v(
+                        "\n                            Submit\n            "
+                      )
+                    ]
                   )
                 ],
                 1
@@ -77568,7 +77576,11 @@ var render = function() {
                       on: { click: _vm.solversClose },
                       slot: "actions"
                     },
-                    [_vm._v("\n                            关闭\n            ")]
+                    [
+                      _vm._v(
+                        "\n                            Close\n            "
+                      )
+                    ]
                   )
                 ],
                 1
