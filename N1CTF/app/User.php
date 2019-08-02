@@ -48,7 +48,13 @@ class User extends Authenticatable implements MustVerifyEmail
         } else return false;
     }
 
-
+    public function markEmailAsVerified()
+    {
+        return $this->forceFill([
+            'email_verified_at' => $this->freshTimestamp(),
+            'api_token' => str_random(60),
+        ])->save();
+    }
 
     //关联模型
     public function challenges()
