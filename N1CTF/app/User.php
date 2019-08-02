@@ -7,8 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Validator;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -18,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'power', 'finishedchallenge', 'api_token','score','time'
+        'name', 'email', 'password', 'power', 'finishedchallenge', 'api_token','score','time','email_verified_at'
     ];
 
     /**
@@ -30,6 +31,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+   /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
     public static function isadmin()
     {
         if (Auth::check()) {
@@ -37,6 +47,8 @@ class User extends Authenticatable
             else return false;
         } else return false;
     }
+
+
 
     //关联模型
     public function challenges()
@@ -88,7 +100,7 @@ class User extends Authenticatable
     {
         $scores = collect([]);
         #$sorted = User::orderBy('score','desc')->orderBy('time','asc')->get();
-        $users = User::all();
+        $users = User::has('challenges')->get();
         foreach ($users as $user) {
             #echo $user;
             $id = $user->id;
