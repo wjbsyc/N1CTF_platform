@@ -61,7 +61,7 @@ class ChallengeController extends Controller
             $challenge->description = $request['description'];
             $challenge->url = $request['url'];
             $challenge->flag = $request['flag'];
-            //$challenge->info=$request['info'];
+            $challenge->info=$request['info'];
             $challenge->score = $request['score'];
             if ($challenge->save()) return redirect()->route('login');
             else return view('edit', ['status' => '出现错误']);
