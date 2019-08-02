@@ -31,6 +31,7 @@ Route::get('/userDetail','UserController@detailIndex')->middleware('verified');
 Route::get('/history','ChallengeController@historyIndex');
 Route::get('/gamemanage','timecontroller@index');
 Route::get('gameover','timecontroller@over');
+Route::post('time','timecontroller@gamestart');
 Route::get('gamestartnow','timecontroller@GameStartNow');
 // 计分板测试
 Route::get('/scoreboard', 'ChallengeController@scoreboardIndex');
