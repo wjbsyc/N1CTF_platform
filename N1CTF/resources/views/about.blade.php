@@ -3,7 +3,7 @@
 @section('content')
 
 <div style="text-align: center;">
-<img src="{{asset('/images/misc111.jpg')}}"/>
+<img src="{{asset('/images/misc111.jpg')}}" width="90%" height="80%" />
 </div>
 
 @endsection
