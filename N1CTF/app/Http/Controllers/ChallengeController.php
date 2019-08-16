@@ -252,7 +252,7 @@ class ChallengeController extends Controller
             $cnt=$c->users()->count();
             if($cnt)
             {
-                $c->score=10000/($cnt+9);
+                if( $c->score !=0 ){$c->score=10000/($cnt+9);}
                 $c->save();
             }
             return 'true';
