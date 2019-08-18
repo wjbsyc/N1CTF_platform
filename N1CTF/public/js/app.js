@@ -38261,7 +38261,7 @@ var routes = [{
     group: 'challenges',
     hash: true,
     routes: ['Web', 'Re', 'Pwn', 'Crypto', 'Misc']
-}, 'userDetail', 'scoreboard', 'about', 'login', 'logout', 'score', 'register', 'profile', 'create', 'edit', 'publishNotice', 'notice', 'gamemanage', 'history'];
+}, 'userDetail', 'scoreboard', 'about', 'login', 'logout', 'score', 'register', 'profile', 'create', 'edit', 'publishNotice', 'notice', 'gamemanage', 'history', 'rules'];
 
 var hashRoutesMap = function hashRoutesMap(routes, routeList) {
     routes.routes.map(function (val) {
@@ -76391,6 +76391,10 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
 
 /***/ }),
 /* 459 */
@@ -76566,12 +76570,19 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
+              _c(
+                "mu-list-item",
+                { attrs: { button: "", href: _vm.routeList.get("rules") } },
+                [_c("mu-list-item-title", [_vm._v("Rules")])],
+                1
+              ),
+              _vm._v(" "),
               _c("mu-divider"),
               _vm._v(" "),
               _c(
                 "mu-list-item",
                 { attrs: { button: "", href: _vm.routeList.get("about") } },
-                [_c("mu-list-item-title", [_vm._v("About")])],
+                [_c("mu-list-item-title", [_vm._v("Nu1L")])],
                 1
               )
             ],

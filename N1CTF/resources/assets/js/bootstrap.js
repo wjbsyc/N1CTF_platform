@@ -27,6 +27,7 @@ let routes = [
     'notice',
     'gamemanage',
     'history',
+    'rules',
 ];
 
 let hashRoutesMap = (routes, routeList) => {

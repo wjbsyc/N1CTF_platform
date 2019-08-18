@@ -50,9 +50,13 @@
                 <mu-list-item-title>Notice</mu-list-item-title>
                 </mu-list-item>              
               <!--   <mu-list-item title="Notice" :href="routeList.get('notice')"/> -->
+                
+                <mu-list-item button :href="routeList.get('rules')">
+                <mu-list-item-title>Rules</mu-list-item-title>
+                </mu-list-item> 
                 <mu-divider/>
                 <mu-list-item button :href="routeList.get('about')">
-                <mu-list-item-title>About</mu-list-item-title>
+                <mu-list-item-title>Nu1L</mu-list-item-title>
                 </mu-list-item>              
                 <!-- <mu-list-item title="About" :href="routeList.get('about')"/> -->
             </mu-list>

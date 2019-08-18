@@ -40,6 +40,10 @@ Route::get('/score', 'ChallengeController@ShowScore')->middleware('verified');
 
 Route::get('about',function(){return view('about');});
 
+Route::get('rules',function(){return view('rules');});
+
+Route::get('rules_en',function(){return view('rulesen');});
+
 Route::get('publishNotice','NoticeController@index');
 
 Route::post('newNotice','NoticeController@newnotice');
